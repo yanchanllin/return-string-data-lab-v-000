@@ -25,7 +25,7 @@ class ProductsController < ApplicationController
    @product = Product.find(params[:id])
    render plain: @product.inventory > 0 ? true : false
  end
- 
+
    private
 
    def product_params
