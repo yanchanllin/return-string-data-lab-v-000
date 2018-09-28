@@ -24,9 +24,9 @@ class ProductsController < ApplicationController
    def inventory
      @product = Product.find(params[:id])
      if @product.inventory > 0
-      true
+       @inventory = "true"
      else
-       false
+       @inventory = "false"
      end
      render plain: @inventory
    end
