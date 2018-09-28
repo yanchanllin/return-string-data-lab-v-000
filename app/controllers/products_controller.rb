@@ -24,7 +24,7 @@ class ProductsController < ApplicationController
    def inventory
      @product = Product.find(params[:id])
      if @product.inventory > 0
-       @inventory = "true"
+       @inventory = "Available"
      else
        @inventory = "Sold Out"
      end
