@@ -26,7 +26,7 @@ class ProductsController < ApplicationController
      if @product.inventory > 0
       true
      else
-       @inventory = "Sold Out"
+       false
      end
      render plain: @inventory
    end
